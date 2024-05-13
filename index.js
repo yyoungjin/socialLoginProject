@@ -4,7 +4,7 @@ import cors from 'cors';
 
 import { ping } from './controller/system.js';
 
-const serverPort = 3000;
+const serverPort =  3000;
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -13,8 +13,6 @@ const router = express.Router();
 
 router.route('/ping').get(ping);
 
-app.use('/socialLoginProject/api/v1', router);
+app.use('/socialLoginProject/api/v1',router);
 app.listen(serverPort);
-
 // http://localhost:3000/socialLoginProject/api/v1/ping
-
